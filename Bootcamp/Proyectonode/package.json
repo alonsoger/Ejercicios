@@ -1,0 +1,12 @@
+{
+  "name": "proyectonode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "saludar": "node hola.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GermanAlonso",
+  "license": "ISC"
+}
