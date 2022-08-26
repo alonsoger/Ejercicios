@@ -1,3 +1,4 @@
+//Logger 
 const winston = require('winston');
 
 const logger = winston.createLogger({
@@ -14,9 +15,24 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'combined.log' }),
   ],
 });
-
-// 
+//Impresiones
 logger.info("Imprime info")
 logger.debug("Imprime debug")
 logger.warn("Imprime warn")
 logger.error("Imprime error")
+
+//Funcion
+const miError = valor => {
+  if (typeof valor === 'string') {
+    return "Ingresaste un string";
+  }
+  throw new Error("Tenes que ingresar un 'String'")
+}
+
+const algo = "Algo2";
+
+try {
+  const letra = miError(1)
+} catch (e) {
+  logger.error("Error!")
+}
