@@ -1,0 +1,3 @@
+{"level":"info","message":"Imprime info","service":"user-service"}
+{"level":"warn","message":"Imprime warn","service":"user-service"}
+{"level":"error","message":"Imprime error","service":"user-service"}
