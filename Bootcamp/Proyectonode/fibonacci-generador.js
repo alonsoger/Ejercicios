@@ -1,19 +1,24 @@
-// Fibonacci
+// Fibonacci generador
+function* fibonacci() {
+    yield 0;
+    yield 1;
+    let first = 0;
+    let second = 1;
+    while(true) {
+        const valor = first + second;
+        yield valor;
 
-// function* fibonacci() {
-//     yield 0;
-//     yield 1;
+        first = second;
+        second = valor;
+    }
+}
+const fibo = fibonacci(6);
 
-//     let first = 0;
-//     let second = 1;
+//Fibonacci funcion
+// 0,1,1,2,3,5,8,13,21..
 
-//     while(true) {
-//         const valor = first + second;
-//         yield valor;
+function fibonacci(num) {
+    if (num === 0) return 0;
+    if (num === 1) return 1;
 
-//         first = second;
-//         second = valor;
-//     }
-// }
-
-// const fibo = fibonacci();
+}
