@@ -1,0 +1,3 @@
+onClick() {
+    alert("Hiciste click")
+}
