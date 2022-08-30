@@ -5,10 +5,12 @@ const persona = {
     apellido: {apellido}
 }
 
-// localStorage.setItem("persona", JSON.stringify(persona));
-// sessionStorage.setItem("persona", JSON.stringify(persona));
+localStorage.setItem("persona", JSON.stringify(persona));
+sessionStorage.setItem("persona", JSON.stringify(persona));
 
-// document.cookie = "objCookie=persona; max-age=" + 120
+document.cookie = "objCookie=persona; max-age=" + 120
+
+
 
 
 
