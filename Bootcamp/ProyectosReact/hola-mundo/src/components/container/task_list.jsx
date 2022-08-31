@@ -9,6 +9,10 @@ const TaskListComponent = () => {
 
     const defaultTasks = new Task('Example', 'Default', false, LEVELS.NORMAL);
 
+    const changeState = (id) => {
+        //Podemos cambiar el estado desde una funcion. 
+    }
+
     return (
         <div>
             <div>
