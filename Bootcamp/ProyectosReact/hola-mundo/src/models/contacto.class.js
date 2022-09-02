@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export class Contacto {
     nombre = '';
     apellido = '';
@@ -10,4 +12,14 @@ export class Contacto {
         this.email = email;
         this.conectado = conectado;
     }
+
+    
 }
+
+Contacto.propTypes = {
+    nombre: PropTypes.string,
+    apellido: PropTypes.string,
+    email: PropTypes.string,
+    conectado: PropTypes.bool,
+
+};
