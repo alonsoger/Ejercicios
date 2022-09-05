@@ -17,7 +17,7 @@ const AllCycle = () => {
             document.title = 'Tiempo detenido'
             clearInterval(intervalID);
         };
-    }, [input]);
+    }, []);
 
     return (
         <div>

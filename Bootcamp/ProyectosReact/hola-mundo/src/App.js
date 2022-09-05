@@ -8,7 +8,8 @@ import Ejemplo2 from './hooks/Ejemplo2';
 import ComponenteConContexto from './hooks/Ejemplo3';
 import Ejemplo4 from './hooks/Ejemplo4';
 import GreetingStyled from './components/pure/greetingStyled';
-
+import { Clock } from './components/pure/Ejercicios/Ejercicios4,5,6/Clock';
+import ClockClass from './components/pure/Ejercicios/Ejercicios4,5,6/ClockClass';
 function App() {
   return (
     <div className="App">
@@ -28,11 +29,12 @@ function App() {
         {/* <ComponenteConContexto></ComponenteConContexto> */}
         {/* Todo lo de aca adentro es tratado como props.children */}
         {/* <Ejemplo4 nombre="German">
-       
           <h3>Contenido del props.children</h3>
         </Ejemplo4> */}
 
-        <GreetingStyled name='German' ></GreetingStyled>
+        {/* <GreetingStyled name='German' ></GreetingStyled> */}
+        <Clock></Clock>
+        {/* <ClockClass></ClockClass> */}
       </header>
     </div>
   );
