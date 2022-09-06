@@ -21,7 +21,7 @@ function App() {
         {/* <GreetingF name="German Dos"></GreetingF> */}
 
         {/* Componente de Listado de Tareas */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
         
         {/* Ejemplo uso de Hooks */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -31,10 +31,12 @@ function App() {
         {/* <Ejemplo4 nombre="German">
           <h3>Contenido del props.children</h3>
         </Ejemplo4> */}
-
         {/* <GreetingStyled name='German' ></GreetingStyled> */}
-        <Clock></Clock>
+
+        {/* Ejercicio 4,5,6 Clocks */}
+        {/* <Clock></Clock> */}
         {/* <ClockClass></ClockClass> */}
+
       </header>
     </div>
   );

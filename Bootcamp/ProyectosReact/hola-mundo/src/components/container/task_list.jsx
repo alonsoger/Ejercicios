@@ -26,13 +26,32 @@ const TaskListComponent = () => {
     const changeCompleted = (id) => {
         //Podemos cambiar el estado desde una funcion. 
     }
-
+    //Los estilos tambien se pueden guardar en variables y pasarselas a los divs. 
     return (
         <div>
-            <div>
-                <h1>YOUR TASKS: </h1>
+            <div className='col-12'>
+                <div className='card'>
+                    <div className='card-header p-3'>
+                        <h5>YOUR TASKS:</h5>
+                    </div>
+                    <div className='card-body' data-mdb-perfect-scrollbar='true' style={{position: 'relative', height: '400px'}}> 
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scoper='col'>Title</th>
+                                    <th scoper='col'>Description</th>
+                                    <th scoper='col'>Priority</th>
+                                    <th scoper='col'>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <TaskComponent task={ defaultTasks } ></TaskComponent>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
             </div>
-            <TaskComponent task={ defaultTasks } ></TaskComponent>
         </div>
     );
 };
