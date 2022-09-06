@@ -6,10 +6,13 @@ import TaskComponent from '../pure/task';
 
 
 const TaskListComponent = () => {
-    const defaultTasks = new Task('Example', 'Default', false, LEVELS.NORMAL);
 
+    const defaultTasks1 = new Task('Example1', 'Default', false, LEVELS.URGENTE);
+    const defaultTasks2 = new Task('Example2', 'Default', true, LEVELS.NORMAL);
+    const defaultTasks3 = new Task('Example3', 'Default', true, LEVELS.BLOCKING);
+    
     //Estado del componente
-    const [tasks, setTasks] = useState(defaultTasks);
+    const [tasks, setTasks] = useState(defaultTasks1, defaultTasks2, defaultTasks3);
     const [loading, setLoading] = useState(true);
 
     //Control del ciclo de vida del componente.
@@ -45,9 +48,12 @@ const TaskListComponent = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <TaskComponent task={ defaultTasks } ></TaskComponent>
+                                { tasks.map ((task, index) => {
+                                    return (
+                                        <TaskComponent key={index} task={tasks} ></TaskComponent>
+                                    )
+                                })}
                             </tbody>
-                            
                         </table>
                     </div>
                 </div>
