@@ -6,7 +6,7 @@ import { LEVELS } from '../../models/levels.enum'
 import './../../../src/styles/task.scss';
 
 
-function TaskComponent({ task }) {
+function TaskComponent({ task, complete, remove }) {
 
     useEffect(() => {
         console.log('Created Task');
@@ -29,11 +29,11 @@ function TaskComponent({ task }) {
         }
     }
     /** Funcion que retorna iconos dependiendo de si la tarea esta realizada o no.  */
-    function taskIconComplete() {
+    function taskCompleteIcon() {
         if(task.completed){
-            return (<i className='bi bi-balloon' style={{color: 'green', fontWeight: 'bold'}} ></i>)
+            return (<i onClick={() => complete(task)} className='bi bi-balloon task-action' style={{color: 'green', fontWeight: 'bold'}} ></i>)
         }else {
-            return (<i className='bi bi-balloon' style={{color: 'red', fontWeight: 'bold'}} ></i>)
+            return (<i onClick={() => complete(task)} className='bi bi-balloon task-action' style={{color: 'red', fontWeight: 'bold'}} ></i>)
     }}
 
     return (
@@ -49,7 +49,7 @@ function TaskComponent({ task }) {
             <td className='align-middle'>
             {/* SUSTITUIR POR UN ICONOS */}
             {/* Podemos usar una funcion para agregar los componentes como en el caso siguiente... */}
-            {taskIconComplete()} 
+                {taskCompleteIcon()} 
 
             {/* O podemos usarlo directamente en el HTML.. Dependiendo de que tan grande sean las instrucciones o de como sea la forma del proyecto. */}
                 
@@ -59,7 +59,7 @@ function TaskComponent({ task }) {
                     (<i className='bi bi-balloon' style={{color: 'red', fontWeight: 'bold'}} ></i>)
                 } */}
 
-                <i className='bi-trash' style={{color: 'red', fontSize: '40px'}} ></i>
+                <i className='bi-trash task-action'  style={{color: 'red', fontSize: '40px'}} onClick={() => remove(task)} ></i>
                 {/* <span className='ms-2'>{task.completed ? 'Completed' : 'Pending'}</span> */}
             </td>
 
@@ -76,7 +76,9 @@ function TaskComponent({ task }) {
 }
 
 TaskComponent.propTypes = {
-    task: PropTypes.instanceOf(Task)
+    task: PropTypes.instanceOf(Task).isRequired,
+    complete: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired
 };
 
 

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
-import TaskComponent from '../pure/task';
+import TaskComponent from '../../components/pure/task';
+import TaskForm from '../pure/forms/taskForm';
 
 
 const TaskListComponent = () => {
@@ -12,7 +13,7 @@ const TaskListComponent = () => {
     const defaultTasks3 = new Task('Example3', 'Default', true, LEVELS.BLOCKING);
     
     //Estado del componente
-    const [tasks, setTasks] = useState(defaultTasks1, defaultTasks2, defaultTasks3);
+    const [tasks, setTasks] = useState([defaultTasks1, defaultTasks2, defaultTasks3]);
     const [loading, setLoading] = useState(true);
 
     //Control del ciclo de vida del componente.
@@ -24,11 +25,26 @@ const TaskListComponent = () => {
         };
     }, [tasks]);
 
-    
-
-    const changeCompleted = (id) => {
-        //Podemos cambiar el estado desde una funcion. 
+    function completeTask(task) {
+        console.log('Completed this Task:', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks[index].completed = !tempTasks[index].completed;
+        //We update the state of the component and it will update the iteration of the tasks in order to show the task updated.
+        setTasks(tempTasks);
     }
+
+    function deleteTask(task){
+        console.log('Completed this Task:', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.splice(index, 1);
+        setTasks(tempTasks);
+    }
+
+
+
+
     //Los estilos tambien se pueden guardar en variables y pasarselas a los divs. 
     return (
         <div>
@@ -37,7 +53,9 @@ const TaskListComponent = () => {
                     <div className='card-header p-3'>
                         <h5>YOUR TASKS:</h5>
                     </div>
-                    <div className='card-body' data-mdb-perfect-scrollbar='true' style={{position: 'relative', height: '400px'}}> 
+                    <div className='card-body' 
+                        data-mdb-perfect-scrollbar='true' 
+                        style={{position: 'relative', height: '400px'}}> 
                         <table>
                             <thead>
                                 <tr>
@@ -48,14 +66,20 @@ const TaskListComponent = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                { tasks.map ((task, index) => {
+                                { tasks.map((task, index) => {
                                     return (
-                                        <TaskComponent key={index} task={tasks} ></TaskComponent>
+                                        <TaskComponent 
+                                            key={index} 
+                                            task={ task }
+                                            complete={ completeTask }
+                                            remove={ deleteTask }
+                                        ></TaskComponent>
                                     )
                                 })}
                             </tbody>
                         </table>
                     </div>
+                    {/* <TaskForm></TaskForm> */}
                 </div>
             </div>
         </div>

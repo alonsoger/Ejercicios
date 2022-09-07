@@ -3,13 +3,14 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
-import Ejemplo1 from './hooks/Ejemplo1';
-import Ejemplo2 from './hooks/Ejemplo2';
-import ComponenteConContexto from './hooks/Ejemplo3';
-import Ejemplo4 from './hooks/Ejemplo4';
-import GreetingStyled from './components/pure/greetingStyled';
+import Ejemplo1 from './hooks/Ejemplos/Ejemplo1';
+import Ejemplo2 from './hooks/Ejemplos/Ejemplo2';
+import ComponenteConContexto from './hooks/Ejemplos/Ejemplo3';
+import Ejemplo4 from './hooks/Ejemplos/Ejemplo4';
+import GreetingStyled from './components/pure/Ejemplos/greetingStyled';
 import { Clock } from './components/pure/Ejercicios/Ejercicios4,5,6/Clock';
 import ClockClass from './components/pure/Ejercicios/Ejercicios4,5,6/ClockClass';
+import Father from './components/container/Ejemplos/father';
 function App() {
   return (
     <div className="App">
@@ -20,7 +21,7 @@ function App() {
         {/* <Greeting name="German"></Greeting> */}
         {/* <GreetingF name="German Dos"></GreetingF> */}
 
-        {/* Componente de Listado de Tareas */}
+        {/* Componente de Listado de Tareas, que seria de la aplicacion posta de React */}
         <TaskListComponent></TaskListComponent>
         
         {/* Ejemplo uso de Hooks */}
@@ -37,6 +38,8 @@ function App() {
         {/* <Clock></Clock> */}
         {/* <ClockClass></ClockClass> */}
 
+        {/* Gestion de eventos, Ejemplo con componente father y child */}
+        {/* <Father></Father> */}
       </header>
     </div>
   );
