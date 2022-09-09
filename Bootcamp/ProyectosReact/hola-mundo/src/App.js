@@ -11,6 +11,7 @@ import GreetingStyled from './components/pure/Ejemplos/greetingStyled';
 import { Clock } from './components/pure/Ejercicios/Ejercicios4,5,6/Clock';
 import ClockClass from './components/pure/Ejercicios/Ejercicios4,5,6/ClockClass';
 import Father from './components/container/Ejemplos/father';
+import ComponenteA from './components/pure/Ejercicios/componenteA';
 function App() {
   return (
     <div className="App">
@@ -22,7 +23,7 @@ function App() {
         {/* <GreetingF name="German Dos"></GreetingF> */}
 
         {/* Componente de Listado de Tareas, que seria de la aplicacion posta de React */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
         
         {/* Ejemplo uso de Hooks */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -34,6 +35,8 @@ function App() {
         </Ejemplo4> */}
         {/* <GreetingStyled name='German' ></GreetingStyled> */}
 
+        {/* Ejercicio 1,2,3 */}
+        <ComponenteA></ComponenteA>
         {/* Ejercicio 4,5,6 Clocks */}
         {/* <Clock></Clock> */}
         {/* <ClockClass></ClockClass> */}

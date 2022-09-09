@@ -1,3 +1,5 @@
+//Componente A
+
 import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
@@ -42,6 +44,14 @@ const TaskListComponent = () => {
         setTasks(tempTasks);
     }
 
+    function addTask(task) {
+        console.log('Completed this Task:', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.push(task);
+        setTasks(tempTasks);
+    }
+
 
 
 
@@ -79,9 +89,10 @@ const TaskListComponent = () => {
                             </tbody>
                         </table>
                     </div>
-                    {/* <TaskForm></TaskForm> */}
+                    
                 </div>
             </div>
+            <TaskForm add={addTask}></TaskForm>
         </div>
     );
 };
