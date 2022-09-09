@@ -11,7 +11,8 @@ import GreetingStyled from './components/pure/Ejemplos/greetingStyled';
 import { Clock } from './components/pure/Ejercicios/Ejercicios4,5,6/Clock';
 import ClockClass from './components/pure/Ejercicios/Ejercicios4,5,6/ClockClass';
 import Father from './components/container/Ejemplos/father';
-import ComponenteA from './components/pure/Ejercicios/componenteA';
+import List from './components/pure/Ejercicios/Ejercicio7,8,9/list';
+
 function App() {
   return (
     <div className="App">
@@ -36,11 +37,12 @@ function App() {
         {/* <GreetingStyled name='German' ></GreetingStyled> */}
 
         {/* Ejercicio 1,2,3 */}
-        <ComponenteA></ComponenteA>
+        {/* <ComponenteA></ComponenteA> */}
         {/* Ejercicio 4,5,6 Clocks */}
         {/* <Clock></Clock> */}
         {/* <ClockClass></ClockClass> */}
-
+        {/* Ejercicio 7,8,9 */}
+        <List></List>
         {/* Gestion de eventos, Ejemplo con componente father y child */}
         {/* <Father></Father> */}
       </header>

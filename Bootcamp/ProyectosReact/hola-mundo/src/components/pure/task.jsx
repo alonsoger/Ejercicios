@@ -1,4 +1,4 @@
-//Compnente B
+//Componente B
 
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -30,6 +30,8 @@ function TaskComponent({ task, complete, remove }) {
                 break;
         }
     }
+    //////////////////////////////////////////////////////////////////////////////////////
+    
     /** Funcion que retorna iconos dependiendo de si la tarea esta realizada o no.  */
     function taskCompleteIcon() {
         if(task.completed){

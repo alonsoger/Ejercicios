@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Contacto } from '../../../models/contacto.class';
+import { Contacto } from '../../../../models/contacto.class';
 import PropTypes from 'prop-types';
 
 const ComponenteB = ({ contacto }) => {
@@ -9,13 +9,19 @@ const ComponenteB = ({ contacto }) => {
     const changeState = () => {
         setConected();
     }
-
+    //Funcion si el usuario esta conectado o no. Nuestra otro color
+    function contactoConectado() {
+        if(Contacto.conectado){
+            return (<i onClick={() => conectado(contacto)} className='bi bi-balloon task-action' style={{color: 'green', fontWeight: 'bold'}} ></i>)
+        }else {
+            return (<i onClick={() => conectado(contacto)} className='bi bi-balloon task-action' style={{color: 'red', fontWeight: 'bold'}} ></i>)
+    }}
     return (
         <div>
-            <h2> { contacto.nombre } </h2>
-            <h3> { contacto.apellido } </h3>
-            <h4> { contacto.email } </h4>
-            <h5> { conectado ? 'Contacto En Linea':'Contacto No Disponible' } </h5>
+            <td> { contacto.nombre } </td>
+            <td> { contacto.apellido } </td>
+            <td> { contacto.email } </td>
+            <td> {contactoConectado()} </td>
             <div>
                 <button onClick={changeState}></button>
             </div>
