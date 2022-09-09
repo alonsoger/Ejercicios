@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Contacto } from "../../../../models/contacto.class";
+import { Contacto } from "../../../../../models/contacto.class";
 import PropTypes from 'prop-types'
 
 const List = ({ add }) => {

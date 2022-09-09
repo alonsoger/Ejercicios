@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Contacto } from '../../../../models/contacto.class';
-import List from '../Ejercicio7,8,9/list';
+import List from '../Ejercicio1,2,3/Ejercicio7,8,9/list'
 import ComponenteB from './componenteB';
 
 
