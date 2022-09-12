@@ -12,6 +12,7 @@ import { Clock } from './components/pure/Ejercicios/Ejercicios4,5,6/Clock';
 import ClockClass from './components/pure/Ejercicios/Ejercicios4,5,6/ClockClass';
 import Father from './components/container/Ejemplos/father';
 import ComponenteA from './components/pure/Ejercicios/Ejercicio1,2,3/componenteA';
+import OpcionalRender from './components/pure/Ejemplos/opcionalRender';
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
         {/* <List></List> */}
         {/* Gestion de eventos, Ejemplo con componente father y child */}
         {/* <Father></Father> */}
+
+        {/* Ejemplos de renderizado condicional */}
+        <OpcionalRender></OpcionalRender>
       </header>
     </div>
   );
