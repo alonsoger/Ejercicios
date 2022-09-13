@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 400px;
     height: 100px;
 }
@@ -17,20 +16,26 @@
     height: 80px;
 }
 
-.texto2{
-    display: none;
-}
-
-.btn:hover{
+.btn:hover {
     background-color: green;
-}
-
-.btn .texto:hover {
-    display: none;
-}
-
-.texto2:hover {
-    display: flex;
     color: white;
 }
 
+.btn::before{
+    content: "Pasa por encima";
+}
+
+.btn::after{
+    display: none;
+    content: "¡Hecho!"; 
+}
+
+.btn:hover::before {
+    display: none;
+    background-color: green;
+    color: white;
+}
+
+.btn:hover::after{
+    display: block;
+}
