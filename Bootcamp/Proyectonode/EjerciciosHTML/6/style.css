@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 100px;
+}
+
+.btn {
+    width: 100px;
+    height: 80px;
+}
+
+.texto2{
+    display: none;
+}
+
+.btn:hover{
+    background-color: green;
+}
+
+.btn .texto:hover {
+    display: none;
+}
+
+.texto2:hover {
+    display: flex;
+    color: white;
+}
+

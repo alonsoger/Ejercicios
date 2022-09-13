@@ -38,11 +38,23 @@ function TaskComponent({ task, complete, remove }) {
             return (<i onClick={() => complete(task)} className='bi bi-balloon task-action' style={{color: 'green', fontWeight: 'bold'}} ></i>)
         }else {
             return (<i onClick={() => complete(task)} className='bi bi-balloon task-action' style={{color: 'red', fontWeight: 'bold'}} ></i>)
-    }}
+    }
+    }
+
+    const taskCompleted = {
+        color: 'gray',
+        textDecoration: 'line-through'
+    }
+
+    const taskIncompleted = {
+        fontWeight: 'bold',
+        color: 'red'
+    }
+
+
 
     return (
-
-        <tr className='fw-normal task-name'>
+        <tr className='fw-normal task-name' style={task.completed ? taskCompleted : taskIncompleted}>
             <th><span className='ms-2'>{task.name}</span></th>
             <td className='align-middle'><span className='ms-2'>{task.descripcion}</span></td>
             <td className='align-middle'>
@@ -66,8 +78,6 @@ function TaskComponent({ task, complete, remove }) {
                 <i className='bi-trash task-action'  style={{color: 'red', fontSize: '40px'}} onClick={() => remove(task)} ></i>
                 {/* <span className='ms-2'>{task.completed ? 'Completed' : 'Pending'}</span> */}
             </td>
-
-
         </tr>
 
         // <div>

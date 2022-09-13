@@ -25,7 +25,7 @@ function App() {
         {/* <GreetingF name="German Dos"></GreetingF> */}
 
         {/* Componente de Listado de Tareas, que seria de la aplicacion posta de React */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
         
         {/* Ejemplo uso de Hooks */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -48,7 +48,7 @@ function App() {
         {/* <Father></Father> */}
 
         {/* Ejemplos de renderizado condicional */}
-        <OpcionalRender></OpcionalRender>
+        {/* <OpcionalRender></OpcionalRender> */}
       </header>
     </div>
   );
