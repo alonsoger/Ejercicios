@@ -13,6 +13,7 @@ import ClockClass from './components/pure/Ejercicios/Ejercicios4,5,6/ClockClass'
 import Father from './components/container/Ejemplos/father';
 import ComponenteA from './components/pure/Ejercicios/Ejercicio1,2,3/componenteA';
 import OpcionalRender from './components/pure/Ejemplos/opcionalRender';
+import LoginFormik from './components/pure/forms/loginFormik';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         {/* <GreetingF name="German Dos"></GreetingF> */}
 
         {/* Componente de Listado de Tareas, que seria de la aplicacion posta de React */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
         
         {/* Ejemplo uso de Hooks */}
         {/* <Ejemplo1></Ejemplo1> */}
@@ -49,6 +50,9 @@ function App() {
 
         {/* Ejemplos de renderizado condicional */}
         {/* <OpcionalRender></OpcionalRender> */}
+
+        {/* Ejemplos de Uso de FORMIK Y YUP */}
+        <LoginFormik></LoginFormik>
       </header>
     </div>
   );
