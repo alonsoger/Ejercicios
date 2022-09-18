@@ -39,14 +39,13 @@ const LoginFormik = () => {
                 }}
             >
                 {/* Obtain props from Formik (Para poder trabajar con ellas) */}
-
                 {({
                     value,
                     touched,
                     errors,
                     isSubmitting,
                     handleChange,
-                    handleBlur,}) =>(
+                    handleBlur,}) => (
                         <Form>
                             <label htmlFor="email">Email:</label>
                             <Field id="email" type="email" name="email" placeholder="example@email.com" />
