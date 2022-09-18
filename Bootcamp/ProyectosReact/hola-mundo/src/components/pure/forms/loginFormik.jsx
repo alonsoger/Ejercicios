@@ -63,7 +63,7 @@ const LoginFormik = () => {
                                 placeholder="Password"
                                 type="password"
                             />
-                            {/* Emails Errors */}
+                            {/* Password Errors */}
                             {
                                 errors.password && touched.password && 
                                 (
