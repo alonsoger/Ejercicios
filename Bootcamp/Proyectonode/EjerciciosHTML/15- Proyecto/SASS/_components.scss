@@ -7,7 +7,6 @@
     padding: 0.1rem 1rem;
 }
 
-
 $color-main: #0075FF;
 
 .btn-main {
@@ -44,10 +43,21 @@ $color-main: #0075FF;
 }
 
 .main-menu {
+    margin-bottom: 0;
+    
     li {
         list-style: none;
         display: inline;
-        font-size: 0.5rem;
+        font-size: 0.75rem;
+
+        a {
+            color: rgb(172, 46, 46);
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -58,5 +68,50 @@ $color-main: #0075FF;
         color: $color-main;
         border-radius: 50%;
         box-shadow: 0 0 10px #00000040;
+    }
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    .icon {
+        color: $color-main;
+        font-size: 10rem;
+        text-align: center;
+    }
+    .description {
+        .title {
+            font-size: 2rem;
+            text-align: center;
+        }
+        .text {
+            color: #888;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    .cta {
+        color: $color-main;
+        font-weight: 600;
+        margin-top: 3rem;
+        text-align: center;
+    }
+}
+
+.icon-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .icon {
+        padding: 0;
+        color: $color-main;
+        font-size: 10rem;    
+    }
+    .title {
+        margin-top: -2rem;
+        font-size: 1,5rem;
+        font-weight: 600;    
     }
 }
