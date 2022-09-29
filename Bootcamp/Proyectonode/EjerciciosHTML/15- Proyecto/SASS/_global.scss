@@ -2,7 +2,7 @@
 
 @mixin section-display {
     width: 100%;
-    max-width: 768px;
+    max-width: 992px;
     margin: auto;
     padding: 3rem;
 }
@@ -44,6 +44,9 @@ body {
 
 .sec-features {
     @include section-display();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .intro {
         text-align: center;
         h3 {
@@ -52,6 +55,39 @@ body {
         p {
             font-size: 0.8rem;
             color: #888;
+        }
+    }
+    .features {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .text{
+            padding: 2rem 0;
+            flex: 1;
+            .feature {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .description {
+                    margin-left: 1rem;
+                    max-width: 20rem;
+                    .description-title {
+                        font-size: 1.15rem;
+                    }
+                    .description-text {
+                        font-size: 1rem;
+
+                    }
+                }
+
+            }
+        }
+        .image {
+            img {
+                max-width: 20rem;
+
+            }
+
         }
     }
 }

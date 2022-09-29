@@ -36,6 +36,7 @@
   list-style: none;
   display: inline;
   font-size: 0.75rem;
+  margin-right: 2rem;
 }
 .main-menu li a {
   text-decoration: none;
@@ -46,8 +47,8 @@
 }
 
 .icon-sm i {
-  font-size: 0.75rem;
-  padding: 0.1rem 0.25rem;
+  font-size: 1.25rem;
+  padding: 0.4rem 0.65rem;
   color: #0075FF;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2509803922);
@@ -117,7 +118,7 @@ body {
 .sec-home {
   display: flex;
   width: 100%;
-  max-width: 768px;
+  max-width: 992px;
   margin: auto;
   padding: 3rem;
   align-items: center;
@@ -135,9 +136,12 @@ body {
 
 .sec-features {
   width: 100%;
-  max-width: 768px;
+  max-width: 992px;
   margin: auto;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .sec-features .intro {
   text-align: center;
@@ -148,6 +152,33 @@ body {
 .sec-features .intro p {
   font-size: 0.8rem;
   color: #888;
+}
+.sec-features .features {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.sec-features .features .text {
+  padding: 2rem 0;
+  flex: 1;
+}
+.sec-features .features .text .feature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sec-features .features .text .feature .description {
+  margin-left: 1rem;
+  max-width: 20rem;
+}
+.sec-features .features .text .feature .description .description-title {
+  font-size: 1.15rem;
+}
+.sec-features .features .text .feature .description .description-text {
+  font-size: 1rem;
+}
+.sec-features .features .image img {
+  max-width: 20rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
