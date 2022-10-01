@@ -15,6 +15,7 @@ import ComponenteA from './components/pure/Ejercicios/Ejercicio1,2,3/componenteA
 import OpcionalRender from './components/pure/Ejemplos/opcionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import FormularioTask from './components/pure/Ejercicios/13,14,15/formulario';
 
 function App() {
   return (
@@ -54,7 +55,9 @@ function App() {
 
         {/* Ejemplos de Uso de FORMIK Y YUP */}
         {/* <LoginFormik></LoginFormik> */}
-        <RegisterFormik></RegisterFormik>
+        {/* <RegisterFormik></RegisterFormik> */}
+        <FormularioTask></FormularioTask>
+
       </header>
     </div>
   );
