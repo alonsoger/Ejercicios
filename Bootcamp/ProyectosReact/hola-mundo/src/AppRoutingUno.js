@@ -11,8 +11,7 @@ function AppRoutingUno() {
           <Link to='/' > | HOME |</Link>
           <Link to='/about' > | ABOUT |</Link>
           <Link to='/faqs' > | FAQS |</Link>
-
-
+          <Link to='/any404' > | Not Found |</Link>
         </aside>
         <main>
           <Routes>
