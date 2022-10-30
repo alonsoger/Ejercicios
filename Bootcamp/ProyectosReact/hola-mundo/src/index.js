@@ -8,12 +8,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AppRoutingUno from './AppRoutingUno';
+import AppRoutingFinal from './AppRoutingFinal';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <AppRoutingUno></AppRoutingUno>
+    {/* <AppRoutingUno></AppRoutingUno> */}
+    <AppRoutingFinal></AppRoutingFinal>
+
   </React.StrictMode>
 );
 
