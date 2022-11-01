@@ -13,6 +13,8 @@ const CopyRight = () => {
                 <Link color="inherit" href="*">
                     Imagina Formacion - Link a algun lado
                 </Link>
+                { ' ' }
+                { new Date().getFullYear() }
             </Typography>
         </div>
     );

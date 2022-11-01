@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    {/* <AppRoutingUno></AppRoutingUno> */}
+    <AppRoutingUno></AppRoutingUno>
     <AppRoutingFinal></AppRoutingFinal>
 
   </React.StrictMode>

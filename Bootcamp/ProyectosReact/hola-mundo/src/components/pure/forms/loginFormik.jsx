@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 
 
 const loginSchema = Yup.object().shape(
@@ -15,13 +16,15 @@ const loginSchema = Yup.object().shape(
 );
 
 
-
 const LoginFormik = () => {
+
+    const navigate = useNavigate();
 
     const initialCredentials = {
         email: '',
         password: ''
     }
+
     return (
         <div>
             <h4>Login Formik</h4>
@@ -71,6 +74,7 @@ const LoginFormik = () => {
                                 )
                             }
                             <button type="submit">Login</button>
+                            <button type="submit" onClick={() => navigate('/register')}>Register</button>
                             {isSubmitting ? (<p>Login your credentials...</p>): null}
                         </Form>
                     )}

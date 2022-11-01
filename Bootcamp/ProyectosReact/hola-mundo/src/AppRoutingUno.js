@@ -7,6 +7,7 @@ import ProfilePage from './pages/profile/ProfilePage';
 import TasksPage from './pages/tasks/TasksPage';
 import TasksDetailPage from './pages/tasks/TasksDetailPage';
 import LoginPage from './pages/auth/LoginPage';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function AppRoutingUno() {
 
@@ -38,6 +39,7 @@ function AppRoutingUno() {
         <aside>
           <Link to='/' > | HOME |</Link>
           <Link to='/login' > | LOGIN |</Link>
+          <Link to='/register' > | Register |</Link>
           <Link to='/tasks' > | TASKS |</Link>
           <Link to='/about' > | ABOUT |</Link>
           <Link to='/faqs' > | FAQS |</Link>
@@ -60,6 +62,7 @@ function AppRoutingUno() {
               } 
 
             />
+            <Route exact path='/register' element={ <RegisterFormik/> } />
             <Route path='/about' element={ <AboutPage/> } />
             <Route path='/profile' element=
               {
@@ -68,7 +71,13 @@ function AppRoutingUno() {
                 (<Navigate replace to='/login'/>)
               }
             />
-            <Route path='/tasks' element={ <TasksPage/> } />
+            <Route path='/tasks' element={ 
+              
+              logged ? (<TasksPage/>)
+              : 
+              (<Navigate replace to='/login'/>)
+              }
+              />
             <Route 
               exact 
               path='/task/:id/'

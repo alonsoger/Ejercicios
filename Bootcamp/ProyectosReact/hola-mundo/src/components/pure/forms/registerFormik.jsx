@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
 
 
 // MODELS
@@ -8,6 +9,8 @@ import { User } from '../../../models/user.class';
 import { ROLES } from '../../../models/roles.enum';
 
 const RegisterFormik = () => {
+
+    const navigate = useNavigate();
 
     let user = new User();
 
@@ -128,6 +131,7 @@ const RegisterFormik = () => {
                             }
                         {/* *********************** BOTON ************************ */}
                             <button type="submit">Register Account</button>
+                            <button type="submit" onClick={() => navigate('/login')}>Go to Login</button>
                             {isSubmitting ? (<p>Sending your credentials...</p>): null}
                     </Form>
                 )}
