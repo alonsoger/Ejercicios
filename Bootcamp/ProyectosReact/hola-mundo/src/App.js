@@ -16,6 +16,8 @@ import OpcionalRender from './components/pure/Ejemplos/opcionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
 import FormularioTask from './components/pure/Ejercicios/13,14,15/formulario';
+import AsyncExample from './components/pure/Ejemplos/asyncExample';
+import ObservableExample from './components/pure/Ejemplos/ObservableExample';
 
 function App() {
   return (
@@ -56,8 +58,11 @@ function App() {
         {/* Ejemplos de Uso de FORMIK Y YUP */}
         {/* <LoginFormik></LoginFormik> */}
         {/* <RegisterFormik></RegisterFormik> */}
-        <FormularioTask></FormularioTask>
+        {/* <FormularioTask></FormularioTask> */}
 
+        {/* Ejemplos de procesos asincronos */}
+        {/* <AsyncExample></AsyncExample> */}
+        <ObservableExample></ObservableExample>
       </header>
     </div>
   );
