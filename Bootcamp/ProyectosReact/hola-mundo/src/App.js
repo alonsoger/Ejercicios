@@ -18,6 +18,7 @@ import RegisterFormik from './components/pure/forms/registerFormik';
 import FormularioTask from './components/pure/Ejercicios/13,14,15/formulario';
 import AsyncExample from './components/pure/Ejemplos/asyncExample';
 import ObservableExample from './components/pure/Ejemplos/ObservableExample';
+import FetchExample from './components/pure/Ejemplos/FetchExample';
 
 function App() {
   return (
@@ -62,7 +63,10 @@ function App() {
 
         {/* Ejemplos de procesos asincronos */}
         {/* <AsyncExample></AsyncExample> */}
-        <ObservableExample></ObservableExample>
+        {/* <ObservableExample></ObservableExample> */}
+
+        {/* Ejemplo de peticion HTTP con 'RegRes' (Api de peticiones) */}
+        <FetchExample></FetchExample>
       </header>
     </div>
   );
