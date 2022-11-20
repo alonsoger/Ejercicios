@@ -1,5 +1,5 @@
-const nombre = "Gorka";
-const apellido = "Villar";
+const nombre = "German";
+const apellido = "Alonso";
 const estudiante = `${nombre} ${apellido}`;
 
 const estudianteMayus = estudiante.toUpperCase();
