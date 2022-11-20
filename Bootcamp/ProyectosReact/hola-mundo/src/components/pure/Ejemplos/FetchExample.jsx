@@ -5,16 +5,19 @@ import { getAllUsers } from './../../../services/FetchService';
 const FetchExample = () => {
 
     const [users, setUsers] = useState([])
+    const [totalUsers] = useState([])
+    const [pages, setPages] = useState(2)
 
     useEffect(() => {
         obtainUsers();
-    }, []);
+    });
 
     const obtainUsers = () => {
         getAllUsers()
             .then((response) => {
-                console.log('All Users:', response.data);
+                console.log('All Users:', body.data);
                 setUsers(response.data);
+                setPages(response.total_pages);
             })
             .catch((error) => {
                 alert(`Error while retreiving the users: ${error}`)
